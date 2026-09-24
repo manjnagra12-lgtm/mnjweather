@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check current weather and forecasts for cities around the world.">
+  <title>Weather Around the World</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="Weather home">mnjweather</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#current-weather">Current weather</a>
+      <a href="#forecast">Forecast</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="weather-search" aria-labelledby="search-heading">
+      <p class="eyebrow">Weather around the world</p>
+      <h1 id="search-heading">Find a city and see what it feels like there.</h1>
+
+      <form id="weather-search-form" class="search-form" role="search">
+        <label for="city-search">Search for a city</label>
+        <div class="search-controls">
+          <input id="city-search" name="city" type="search" value="New York" placeholder="Try London, Tokyo, or New York" autocomplete="off" required>
+          <button id="search-button" type="submit">Search</button>
+        </div>
+        <p id="search-status" class="search-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="current-weather" class="current-weather" aria-labelledby="current-weather-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Right now</p>
+          <h2 id="current-weather-heading"><span id="city-name">New York, United States</span></h2>
+        </div>
+        <p id="updated-at" class="updated-at">Loading weather...</p>
+      </div>
+
+      <div class="current-conditions">
+        <div class="temperature">
+          <span id="temperature-value" class="temperature-value">--</span><span class="temperature-unit">&deg;C</span>
+        </div>
+        <div class="condition-summary">
+          <span id="weather-icon" class="weather-icon" aria-hidden="true">⏳</span>
+          <p id="condition-name" class="condition-name">Loading conditions</p>
+          <p id="feels-like" class="feels-like">Feels like --&deg;C</p>
+        </div>
+        <img id="weather-image" class="weather-image img-fluid rounded" src="https://images.unsplash.com/photo-1534088568595-a066f410bcda?auto=format&fit=crop&w=640&q=80" alt="Blue sky with soft white clouds">
+      </div>
+
+      <dl class="weather-details">
+        <div><dt>High / low</dt><dd id="high-low">-- / --</dd></div>
+        <div><dt>Humidity</dt><dd id="humidity">--</dd></div>
+        <div><dt>Wind</dt><dd id="wind">--</dd></div>
+        <div><dt>Visibility</dt><dd id="visibility">--</dd></div>
+      </dl>
+    </section>
+
+    <section id="forecast" class="forecast" aria-labelledby="forecast-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Looking ahead</p>
+          <h2 id="forecast-heading">5-day forecast</h2>
+        </div>
+      </div>
+
+      <div id="forecast-list" class="forecast-list" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>mnjweather</p>
+    <p>Weather data will appear here once connected to a forecast service.</p>
+    <nav class="social-links d-flex gap-2" aria-label="Social media links">
+      <a class="social-link btn btn-outline-dark btn-sm d-inline-flex align-items-center justify-content-center" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit mnjweather on Instagram" title="Instagram">
+        <i class="bi bi-instagram" aria-hidden="true"></i>
+      </a>
+      <a class="social-link btn btn-outline-dark btn-sm d-inline-flex align-items-center justify-content-center" href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit mnjweather on X" title="X">
+        <i class="bi bi-twitter-x" aria-hidden="true"></i>
+      </a>
+      <a class="social-link btn btn-outline-dark btn-sm d-inline-flex align-items-center justify-content-center" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit mnjweather on Facebook" title="Facebook">
+        <i class="bi bi-facebook" aria-hidden="true"></i>
+      </a>
+    </nav>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
