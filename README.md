@@ -1,10 +1,11 @@
 # mnjweather
 
-A lightweight weather application for searching cities around the world and viewing current conditions plus a five-day forecast.
+A lightweight, browser-only weather application for searching cities around the world and viewing current conditions plus a five-day forecast. It uses only HTML, CSS, and JavaScript; no server or build step is required.
 
 ## Contents
 
 - [Features](#features)
+- [Technology Stack](#technology-stack)
 - [Project Structure](#project-structure)
 - [Wireframes](#wireframes)
 - [APIs And External Resources](#apis-and-external-resources)
@@ -22,6 +23,16 @@ A lightweight weather application for searching cities around the world and view
 - Responsive layout for desktop and mobile screens.
 - Bootstrap 5 utility classes and Bootstrap Icons for responsive controls and social links.
 - Accessible labels, status messages, image alt text, and navigation landmarks.
+
+## Technology Stack
+
+- **HTML5:** Page structure, forms, semantic elements, and accessibility landmarks.
+- **CSS3:** Responsive layout, custom styling, typography, colors, and mobile behavior.
+- **Vanilla JavaScript:** City search, API requests, weather rendering, formatting, and forecast updates.
+- **Bootstrap 5.3.3:** Utility classes and responsive helpers.
+- **Bootstrap Icons 1.11.3:** Social media icons in the footer.
+- **Open-Meteo APIs:** Geocoding and weather forecast data.
+- **Unsplash:** Weather condition images.
 
 ## Project Structure
 
@@ -96,7 +107,7 @@ mnjweather/
 
 ## APIs And External Resources
 
-The app uses the following browser-loaded resources:
+The app runs entirely in the browser and uses the following browser-loaded resources:
 
 - [Open-Meteo Geocoding API](https://geocoding-api.open-meteo.com/v1/search) to find a city and its coordinates.
 - [Open-Meteo Forecast API](https://open-meteo.com/en/docs) to retrieve current weather and five daily forecasts.
@@ -154,6 +165,6 @@ Open-Meteo does not require an API key for this project. An internet connection 
 ## Current Limitations
 
 - The app searches one city at a time; it does not automatically load every major city.
-- Social links currently point to platform homepages and need updating.
+- Social links currently point to platform homepages and needs updating.
 - Weather image URLs are hosted by Unsplash and are not stored locally.
 - There is no backend, caching, saved location list, unit toggle, or automated test suite yet.
