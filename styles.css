@@ -9,6 +9,8 @@
   --accent: #e56b4a;
   --accent-dark: #b84b30;
   --sky: #dcecf1;
+  --page-gutter: clamp(14px, 4vw, 40px);
+  --panel-padding: clamp(24px, 4vw, 36px);
 }
 
 * {
@@ -38,7 +40,7 @@ body {
 .site-header,
 main,
 .site-footer {
-  width: min(1120px, calc(100% - 40px));
+  width: min(1120px, calc(100% - (var(--page-gutter) * 2)));
   margin: 0 auto;
 }
 
@@ -80,7 +82,7 @@ h3 {
 
 .weather-search {
   max-width: 760px;
-  padding: 72px 0 80px;
+  padding: clamp(52px, 8vw, 72px) 0 clamp(56px, 9vw, 80px);
 }
 
 .eyebrow {
@@ -165,7 +167,7 @@ button:hover {
 
 .current-weather,
 .forecast {
-  padding: 36px;
+  padding: var(--panel-padding);
   background: var(--panel);
   border: 1px solid var(--line);
 }
@@ -187,7 +189,7 @@ button:hover {
 .current-conditions {
   display: flex;
   align-items: center;
-  gap: 48px;
+  gap: clamp(24px, 5vw, 48px);
   margin: 48px 0;
 }
 
@@ -278,7 +280,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  padding: 40px 0;
+  padding: clamp(32px, 5vw, 40px) 0;
 }
 
 .social-link {
@@ -287,11 +289,31 @@ button:hover {
   padding: 0;
 }
 
+@media (max-width: 900px) {
+  .current-conditions {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .weather-image {
+    width: min(240px, 32vw);
+    margin-left: auto;
+  }
+
+  .forecast-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .forecast-day:last-child {
+    grid-column: auto;
+  }
+}
+
 @media (max-width: 680px) {
   .site-header,
   main,
   .site-footer {
-    width: min(100% - 28px, 560px);
+    width: min(100% - (var(--page-gutter) * 2), 560px);
   }
 
   .main-nav {
@@ -315,7 +337,7 @@ button:hover {
 
   .current-weather,
   .forecast {
-    padding: 24px;
+    padding: var(--panel-padding);
   }
 
   .section-heading {

@@ -1,6 +1,6 @@
 # mnjweather
 
-A lightweight, browser-only weather application for searching cities around the world and viewing current conditions plus a five-day forecast. It uses only HTML, CSS, and JavaScript; no server or build step is required.
+A lightweight, browser-only weather application for searching cities around the world and viewing current conditions plus a five-day forecast. It uses only HTML, CSS, and JavaScript depolyed to github pages.
 
 ## Contents
 
