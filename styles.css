@@ -24,6 +24,17 @@ body {
   line-height: 1.5;
 }
 
+.top-banner {
+  padding: 10px 20px;
+  color: #fff;
+  background: var(--accent-dark);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .site-header,
 main,
 .site-footer {
